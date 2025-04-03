@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vQMO6Uef9Ec=",
+  "dgSpecHash": "yM2xx1oF9p8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\fille\\Desktop\\CRJTestrunner\\CRJTestrunner.csproj",
+  "projectFilePath": "C:\\Users\\fille\\dev\\dotdev\\Testing-SYSM08-Philip-Anlander\\CRJTestrunner\\CRJTestrunner.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fille\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\fille\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
