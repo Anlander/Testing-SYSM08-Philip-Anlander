@@ -1,5 +1,3 @@
-
-
 @AddToCart
 
 Feature: Add to cart

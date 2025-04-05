@@ -9,6 +9,8 @@ namespace CRJTestrunner.BaseSetup
     protected IBrowser Browser { get; private set; } = null!;
     protected IBrowserContext Context { get; private set; } = null!;
     protected IPage Page { get; private set; } = null!;
+    protected string BaseUrl { get; } = "http://localhost:5211";
+
 
     [BeforeScenario]
     public async Task Setup()
@@ -34,7 +36,7 @@ namespace CRJTestrunner.BaseSetup
 
     protected async Task LoginAsync(string username, string password)
     {
-      await Page.GotoAsync("http://localhost:5211/Account/Login");
+      await Page.GotoAsync($"{BaseUrl}/Account/Login");
       await Page.FillAsync("input[name='Email']", username);
       await Page.FillAsync("input[name='Password']", password);
       await Page.ClickAsync("#login");

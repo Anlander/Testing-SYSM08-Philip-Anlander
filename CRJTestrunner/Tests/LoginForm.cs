@@ -10,7 +10,7 @@ public class LoginFormSteps : PlayWrightBase
   [Given("I am on the simple login page")]
   public async Task GivenIAmOnTheSimpleFormPage()
   {
-    await Page.GotoAsync("http://localhost:5211/Account/Login");
+    await Page.GotoAsync($"{BaseUrl}/Account/Login");
   }
 
   [When(@"I enter ""(.*)"" as the username")]

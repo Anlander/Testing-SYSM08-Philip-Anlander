@@ -24,7 +24,7 @@ public class AddToCart : PlayWrightBase
   [Then(@"I should see the product added to the cart")]
   public Task ThenIShouldSeeTheProductInTheCart()
   {
-    var expectedUrl = "http://localhost:5211/Cart";
+    var expectedUrl = $"{BaseUrl}/Cart";
     var actualUrl = Page.Url;
     Assert.Equal(expectedUrl, actualUrl);
     return Task.CompletedTask;
