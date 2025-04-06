@@ -19,21 +19,21 @@ namespace CRJTestrunner.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [Xunit.TraitAttribute("Category", "RemoveCartItem")]
-    public partial class RemoveCartItemFeature : object, Xunit.IClassFixture<RemoveCartItemFeature.FixtureData>, System.IDisposable
+    [Xunit.TraitAttribute("Category", "AdminCrud")]
+    public partial class AdminCRUDFeature : object, Xunit.IClassFixture<AdminCRUDFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = new string[] {
-                "RemoveCartItem"};
+                "AdminCrud"};
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "RemoveCartItem.feature"
+#line 1 "AdminCRUD.feature"
 #line hidden
         
-        public RemoveCartItemFeature(RemoveCartItemFeature.FixtureData fixtureData, CRJTestrunner_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public AdminCRUDFeature(AdminCRUDFeature.FixtureData fixtureData, CRJTestrunner_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -42,7 +42,7 @@ namespace CRJTestrunner.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Remove cart item", "  As a customer\r\n  I want to remove a product from my cart", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Admin CRUD", "   As a admin\r\n   I want to manage the products as admin", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -82,14 +82,14 @@ namespace CRJTestrunner.Features
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Remove all product from the cart")]
-        [Xunit.TraitAttribute("FeatureTitle", "Remove cart item")]
-        [Xunit.TraitAttribute("Description", "Remove all product from the cart")]
-        public void RemoveAllProductFromTheCart()
+        [Xunit.SkippableFactAttribute(DisplayName="Admin create remove and edit product")]
+        [Xunit.TraitAttribute("FeatureTitle", "Admin CRUD")]
+        [Xunit.TraitAttribute("Description", "Admin create remove and edit product")]
+        public void AdminCreateRemoveAndEditProduct()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Remove all product from the cart", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Admin create remove and edit product", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -101,16 +101,16 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 9
-    testRunner.Given("I am on the product page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am logged in as an admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 10
-    testRunner.When("I click the \"Add to cart\" button for product id \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I navigate to the admin product page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 11
-    testRunner.And("I remove all item from the cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.Then("I should see the admin product page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 12
-    testRunner.Then("I should see the products removed from the cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.When("I navigate to create a new product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -123,12 +123,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             public FixtureData()
             {
-                RemoveCartItemFeature.FeatureSetup();
+                AdminCRUDFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                RemoveCartItemFeature.FeatureTearDown();
+                AdminCRUDFeature.FeatureTearDown();
             }
         }
     }

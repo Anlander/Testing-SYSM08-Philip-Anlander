@@ -1,4 +1,5 @@
 using CRJTestrunner.BaseSetup;
+using Microsoft.Playwright;
 using TechTalk.SpecFlow;
 
 namespace CRJTestrunner.Tests;
@@ -21,16 +22,37 @@ public class RemoveCartItem : PlayWrightBase
     await addToCartButton.ClickAsync();
   }
 
-  [When(@"I remove first item from the cart")]
+  [When(@"I remove all item from the cart")]
   public async Task WhenIRemoveAnItemFromTheCart()
   {
-    var removeButton = Page.Locator("#tableBody tr:first-child td:last-child form button");
-    await removeButton.ClickAsync();
+    var removeButtons = Page.Locator("#tableBody tr td:last-child form button");
+    var count = await removeButtons.CountAsync();
+
+    for (int i = 0; i < count; i++)
+    {
+      try
+      {
+        await removeButtons.Nth(0).ClickAsync();
+
+        removeButtons = Page.Locator("#tableBody tr td:last-child form button");
+        count = await removeButtons.CountAsync();
+      }
+      catch (PlaywrightException ex)
+      {
+        Console.WriteLine($"Error occurred: {ex.Message}");
+        if (Page.IsClosed)
+        {
+          break;
+        }
+      }
+    }
   }
 
   [Then(@"I should see the products removed from the cart")]
   public void ThenIShouldSeeTheProductsRemovedFromTheCart()
   {
-    Console.WriteLine("Product removed from the cart");
+    /*var expectedText = Page.InnerTextAsync("#input_cart_empty");*/
+    /*Assert.Equal("Your cart is empty.", expectedText);*/
+    Console.Write("End");
   }
 }
