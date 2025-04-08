@@ -18,8 +18,8 @@ namespace CRJTestrunner.BaseSetup
       Playwright = await Microsoft.Playwright.Playwright.CreateAsync();
       Browser = await Playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
       {
-        Headless = true,
-        SlowMo = 200,
+        Headless = false,
+        SlowMo = 1000,
       });
       Context = await Browser.NewContextAsync();
       Page = await Context.NewPageAsync();
