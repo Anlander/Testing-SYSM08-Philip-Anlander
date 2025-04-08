@@ -28,7 +28,7 @@ public class CartTotalAmount
       Price = -1,
       ProductCategories = new List<ProductCategory>(),
       ProductOrders = new List<ProductOrder>(),
-      Image = "https://example.com/test-image.jpg",
+      Image = "https://media.power-cdn.net/images/h-a08a36360497b2242deff7127f5ca6f5/products/2572817/2572817_12_900x900_t_g.webp",
       AvailableAmount = 10
     };
 

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRJTestrunner")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da781f2c7624a902472509a51021a3889c8265fe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57d30b43dddc058a6aacd1349f515c28d67cad3f")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRJTestrunner")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRJTestrunner")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
