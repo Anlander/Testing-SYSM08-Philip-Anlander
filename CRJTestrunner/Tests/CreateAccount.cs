@@ -5,6 +5,7 @@ using CRJTestrunner.BaseSetup;
 
 [Binding]
 [Scope(Tag = "createAccount")]
+[Trait("Category", "CreateAccount")]
 public class CreateAccountSteps : PlayWrightBase
 {
 

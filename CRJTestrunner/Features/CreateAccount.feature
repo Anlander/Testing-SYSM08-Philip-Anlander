@@ -15,3 +15,5 @@ Scenario: create account form
     And I enter "Password123!" as the password again
     And I enter "Password123!" as the password confirmation
     Then I submit the form
+
+
