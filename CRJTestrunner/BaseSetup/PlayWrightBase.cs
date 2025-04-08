@@ -34,6 +34,7 @@ namespace CRJTestrunner.BaseSetup
       Playwright?.Dispose();
     }
 
+    // Login
     protected async Task LoginAsync(string username, string password)
     {
       await Page.GotoAsync($"{BaseUrl}/Account/Login");
