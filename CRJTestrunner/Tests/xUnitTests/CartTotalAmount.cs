@@ -25,7 +25,7 @@ public class CartTotalAmount
       Name = "Test Product",
       Title = "Test Product Title",
       Description = "This is a test product description.",
-      Price = -1,
+      Price = 200,
       ProductCategories = new List<ProductCategory>(),
       ProductOrders = new List<ProductOrder>(),
       Image = "https://media.power-cdn.net/images/h-a08a36360497b2242deff7127f5ca6f5/products/2572817/2572817_12_900x900_t_g.webp",
